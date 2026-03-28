@@ -92,7 +92,7 @@ THERMAL_PROPERTIES['316L_SS'] = ThermalProperties(
 - Python 3.10 or later
 - NumPy
 - Matplotlib
-- Tkinter (included in the Python standard library; Linux users may need to install `python3-tk` separately)
+- Tkinter (If using Linux)
 
 ---
 
