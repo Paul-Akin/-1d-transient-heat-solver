@@ -1,6 +1,6 @@
 # Multilayer Transient Heat Conduction Solver
 
-A Python application for 1-D transient heat conduction analysis through multilayer walls, with an interactive GUI for configuring material stacks, load parameters, and real-time visualization of results.
+A Python application for 1-D transient heat conduction analysis through multilayer walls, with an interactive GUI for configuring material stacks, load parameters, and visualization of results.
 
 ---
 
