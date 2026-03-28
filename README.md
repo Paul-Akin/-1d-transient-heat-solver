@@ -53,7 +53,7 @@ All inputs and outputs use **U.S. Customary units**:
 ## Features
 
 - **Configurable layer stack** -- add, remove, and reorder material layers; each layer has an independently selectable material and thickness
-- **Live parameter editing** -- heat flux, duration, and initial temperature are all editable before each run
+- **Parameter editing** -- heat flux, duration, and initial temperature are all editable before each run
 - **Stability check** -- Fourier number computed and reported automatically; unstable configurations are flagged in the log
 - **Three output plots**, each in its own tab with a full Matplotlib navigation toolbar (zoom, pan, save to PNG):
   - Temperature evolution at multiple time snapshots
