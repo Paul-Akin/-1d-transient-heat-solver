@@ -171,12 +171,14 @@ class MultilayerHeatConductionSolver:
         nz = len(self.z)
 
         # Stable time step from Von Neumann criterion: Fo = alpha*dt/dz^2 <= 0.5
-        alpha_min = np.min(self.alpha_array[self.alpha_array > 0.0])
-        dt_max    = self.dz ** 2 / (2.0 * alpha_min)
+        # The most diffusive layer (max alpha) is the binding constraint --
+        # it permits the smallest dt_max of any layer in the stack.
+        alpha_max = np.max(self.alpha_array[self.alpha_array > 0.0])
+        dt_max    = self.dz ** 2 / (2.0 * alpha_max)
         dt        = safety_factor * dt_max
         nt        = int(np.ceil(t_total / dt))
         actual_dt = t_total / nt
-        Fo        = alpha_min * actual_dt / self.dz ** 2
+        Fo        = alpha_max * actual_dt / self.dz ** 2
 
         print(f"\nMultilayer Heat Conduction Solver")
         print(f"{'=' * 68}")
