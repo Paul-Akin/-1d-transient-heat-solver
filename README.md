@@ -65,13 +65,15 @@ All inputs and outputs use **U.S. Customary units**:
 
 ## Material Database
 
-Three materials are included by default. Additional materials can be added by extending the `THERMAL_PROPERTIES` dictionary at the top of the source file.
+Five materials are included by default. Additional materials can be added by extending the `THERMAL_PROPERTIES` dictionary at the top of the source file.
 
 | Key | Material | $k$ [BTU/(hr·ft·°F)] | $\rho$ [lb/ft³] | $c_p$ [BTU/(lb·°F)] |
 |---|---|---|---|---|
 | `A572_GR50` | Structural Steel (A572 Gr. 50) | 34.9 | 490.0 | 0.120 |
 | `C95900` | Aluminum Bronze (C95900) | 41.1 | 440.6 | 0.090 |
 | `ASTM_B21_H02` | Naval Brass (ASTM B21 H02) | 35.0 | 535.0 | 0.090 |
+| `AL_6061_T6` | Aluminum 6061-T6 | 96.5 | 168.6 | 0.214 |
+| `PEEK` | PEEK (Polyetheretherketone) | 0.144 | 81.8 | 0.320 |
 
 To add a new material, append an entry to `THERMAL_PROPERTIES` before the `MATERIAL_KEYS` line:
 
