@@ -82,6 +82,12 @@ THERMAL_PROPERTIES: dict[str, ThermalProperties] = {
     'ASTM_B21_H02': ThermalProperties(
         k=35.0,   rho=535.0, cp=0.09   # Naval brass/bronze
     ),
+    'AL_6061_T6': ThermalProperties(
+        k=96.5,   rho=168.6, cp=0.214  # Aluminum 6061-T6
+    ),
+    'PEEK': ThermalProperties(
+        k=0.144,  rho=81.8,  cp=0.320  # PEEK (polyetheretherketone)
+    ),
 }
 
 MATERIAL_KEYS = list(THERMAL_PROPERTIES.keys())
